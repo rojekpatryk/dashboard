@@ -59,3 +59,6 @@ def main():
     st.subheader('Table')
     st.table(data)
 
+
+if __name__ == "__main__":
+    main()
