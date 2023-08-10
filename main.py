@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[9]:
-
-
 import streamlit as st
 import pandas as pd
 import yfinance as yf
@@ -11,20 +5,7 @@ import plotly.express as px
 import datetime
 
 
-# In[10]:
-
-
-with st.form(key='my_form'):
-    start_input = st.date_input("Pick the start date", datetime.date.today() - datetime.timedelta(days=6))
-    end_input = st.date_input("Pick the end date", datetime.date.today() + datetime.timedelta(1))
-    submit_button = st.form_submit_button(label='Submit')
-
-
-# In[19]:
-
-
 class Graph:
-
     def price(data):
         price_chart = px.line(data, labels={
             "index": "Date",
@@ -33,9 +14,6 @@ class Graph:
         })
         
         return price_chart
-
-
-# In[20]:
 
 
 def main():
